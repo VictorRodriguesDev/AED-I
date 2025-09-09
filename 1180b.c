@@ -5,10 +5,11 @@ int main(){
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &N);
     int Vetor[N];
+    int *p = Vetor;
     for (int i = 0; i < N; i++)
     {
         printf("Vetor[%d] = ", i);
-        scanf("%d", &Vetor[i]);
+        scanf("%d", /*&Vetor[i]*/&*(p + i));
     }
     menorValor = *Vetor;
     for (int i = 0; i < N; i++)
