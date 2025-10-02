@@ -4,16 +4,16 @@
 int main(){
     int n, menorNumero, posicaoMenor = 0;
     int *Vetor;
-    printf("Digite o tamanho do vetor: ");
+    //lendo o tamanho do vetor
     scanf("%d", &n);
     //Alocação dinâmica
     Vetor  = (int *) malloc(n * sizeof(int));
     if (Vetor == NULL){
-        printf("Erro de alocação!\n");
+        //printf("Erro de alocação!\n");
         return 1;
     }
     for (int i = 0; i < n; i++){
-        printf("Vetor[%d] = ",i);
+        //le os valores
         scanf("%d", &*(Vetor + i));
     }
     menorNumero = *Vetor;
@@ -24,7 +24,7 @@ int main(){
         }
     }
     printf("Menor valor: %d\n", menorNumero);
-    printf("Posicao: %d", posicaoMenor);
+    printf("Posicao: %d\n", posicaoMenor);
     free(Vetor);
     return 0;
 }
