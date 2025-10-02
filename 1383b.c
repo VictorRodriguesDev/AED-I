@@ -12,13 +12,13 @@ int main(){
         //alocação dinamica da matriz
         int **matriz = (int **) malloc (SIZE * sizeof(int *));
         if(!matriz){
-            printf("Erro de alocacao de linhas.\n");
+            //printf("Erro de alocacao de linhas.\n");
             return 1;
         }
         for (int i = 0; i < SIZE; i++){
             *(matriz + i) = (int *) malloc (SIZE * sizeof(int));
             if(!*(matriz + i)){
-                printf("Erro de alocacao de colunas.\n");
+                //printf("Erro de alocacao de colunas.\n");
                 return 1;
             }
         }
@@ -50,7 +50,7 @@ int main(){
 int verificaSequencia(int *numeros){
     int *ocorrencias = (int *) calloc (SIZE + 1, sizeof (int));
     if (!ocorrencias){
-        printf("Erro de alocacao em ocorrencias.\n");
+        //printf("Erro de alocacao em ocorrencias.\n");
         exit(1);
     }
     
@@ -70,7 +70,7 @@ int verificaSequencia(int *numeros){
 int verificaLinhas(int **matriz){
     int *valores = (int *) malloc(SIZE * sizeof(int));
     if (!valores){
-        printf("Erro de alocacao em valores.\n");
+        //printf("Erro de alocacao em valores.\n");
         exit(1);
     }
     for (int linha = 0; linha < SIZE; linha++){
@@ -90,7 +90,7 @@ int verificaLinhas(int **matriz){
 int verificaColuna(int **matriz){
     int *valores = (int *) malloc(SIZE * sizeof(int));
     if (!valores){
-        printf("Erro de alocacao em valores.\n");
+        //printf("Erro de alocacao em valores.\n");
         exit(1);
     }
     for (int coluna = 0; coluna < SIZE; coluna++){
@@ -110,7 +110,7 @@ int verificaColuna(int **matriz){
 int verificaBloco(int **matriz){
     int *valores = (int *) malloc(SIZE * sizeof(int));
     if (!valores){
-        printf("Erro de alocacao em valores.\n");
+        //printf("Erro de alocacao em valores.\n");
         exit(1);
     }
     for (int blocoLinha = 0; blocoLinha < SIZE; blocoLinha += 3){

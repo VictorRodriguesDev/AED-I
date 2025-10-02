@@ -12,7 +12,7 @@ int main(){
         //Leitura da matriz
         for (int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++){
-                printf("Matriz[%d][%d] = ", i, j);
+                //le os valores da matriz
                 scanf("%d", &matriz[i][j]);
             }
         }
