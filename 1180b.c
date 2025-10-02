@@ -2,13 +2,13 @@
 
 int main(){
     int N, menorValor = 0, posicaoMenor = 0;
-    printf("Digite o tamanho do vetor: ");
+    //le o tamanho do vetor
     scanf("%d", &N);
     int Vetor[N];
     int *p = Vetor;
     for (int i = 0; i < N; i++)
     {
-        printf("Vetor[%d] = ", i);
+        //leitura dos valores
         scanf("%d", &*(p + i));
     }
     menorValor = *Vetor;
