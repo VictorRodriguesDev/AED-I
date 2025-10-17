@@ -11,6 +11,10 @@ int main(){
         //le o numero de pessoas
         scanf("%d", &numberofPeople);
         int *height = (int *) malloc (numberofPeople * sizeof(int));
+        if(height == NULL){ //checa se a alocação funcionou 
+        //printf("Erro de alocacao!\n");
+        return 1;
+    }
         //leitura do vetor
         for (int i = 0; i < numberofPeople; i++){
             scanf("%d", &*(height + i));
