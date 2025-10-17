@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-void insertion(int, int, int height[]);
+void insertion(int, int *height);
 
 int main(){
     int N, numberofPeople;
@@ -9,28 +10,34 @@ int main(){
     while (N--){
         //le o numero de pessoas
         scanf("%d", &numberofPeople);
-        int height[numberofPeople];
+        int *height = (int *) malloc (numberofPeople * sizeof(int));
         //leitura do vetor
         for (int i = 0; i < numberofPeople; i++){
-            scanf("%d", &height[i]);
+            scanf("%d", &*(height + i));
         }
         
-        insertion(N, numberofPeople, height);
+        insertion(numberofPeople, height);
         printf("\n");
+        free(height);
     }
+    return 0;
 }
 
-void insertion(int N, int numberofPeople, int height[]){
+void insertion(int numberofPeople, int *height){
     int i, j, x;
     for  (j = 1; j < numberofPeople; j++){
         x = height[j];
-        for  (i = j - 1; i >= 0 && height[i] > x; i--){
-            height[i + 1] = height[i];
+        for  (i = j - 1; i >= 0 && *(height + i) > x; i--){
+            *(height + (i + 1)) = *(height + i);
         }
         height[i + 1] = x;
     }
 
     for (int i = 0; i < numberofPeople; i++){
-        printf("%d ", height[i]);
+        if(i == numberofPeople - 1){
+            printf("%d", *(height + i));
+        }else{
+            printf("%d ", *(height + i));
+        }
     }
 }
