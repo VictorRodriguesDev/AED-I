@@ -9,7 +9,7 @@ int main(){
     scanf("%d", &N); //leitura da quantidade de casos de testes
     char *string = (char *) malloc (1001 * sizeof (char)); // alocando memoria dinamicamente
     if(string == NULL){ //checa se a alocação funcionou 
-        printf("Erro de alocacao!\n");
+        //printf("Erro de alocacao!\n");
         return 1;
     }
 
