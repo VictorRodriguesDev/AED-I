@@ -12,7 +12,7 @@ void push(cel **top, int x) {
     cel *p = malloc(sizeof(cel)); // cria nó
     p->value = x; // guarda valor
     p->next = *top; // liga nó
-    *top = p; // atualiza topo
+    *top = p; 
 }
 
 // desempilha elemento
