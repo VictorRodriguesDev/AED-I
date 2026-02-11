@@ -19,7 +19,7 @@ void push(cel **top, int x) {
 void pop(cel **top) {
     cel *p = *top; // nó atual
     *top = p->next; // move topo
-    free(p); // libera memória
+     // libera memória
 }
 
 int main() {
